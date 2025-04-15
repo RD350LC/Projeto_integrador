@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imobiliária - Página Inicial</title>
+    <link rel="stylesheet" href="{% static 'frontend/css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo à Nossa Imobiliária</h1>
+        <p>Seu lugar para encontrar o imóvel perfeito!</p>
+    </header>
+    <main>
+        <section class="features">
+            <div class="feature">
+                <h2>Imóveis</h2>
+                <p>Descubra uma ampla variedade de imóveis disponíveis para compra e aluguel.</p>
+                <a href="{% url 'listar_imoveis' %}">Ver Imóveis</a>
+            </div>
+            <div class="feature">
+                <h2>Corretores</h2>
+                <p>Conecte-se com nossos corretores experientes para ajudá-lo a encontrar o imóvel ideal.</p>
+                <a href="{% url 'listar_corretores' %}">Ver Corretores</a>
+            </div>
+            <div class="feature">
+                <h2>Vendas</h2>
+                <p>Acompanhe as vendas realizadas e veja os detalhes das transações.</p>
+                <a href="{% url 'listar_vendas' %}">Ver Vendas</a>
+            </div>
+            <div class="feature">
+                <h2>Relatórios</h2>
+                <p>Obtenha insights detalhados sobre o mercado imobiliário e nossas operações.</p>
+                <a href="{% url 'listar_relatorios' %}">Ver Relatórios</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Imobiliária. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

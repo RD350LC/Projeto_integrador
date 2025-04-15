@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Imóveis</title>
+</head>
+<body>
+    <header>
+        <h1>Lista de Imóveis</h1>
+    </header>
+    <main>
+        <ul>
+            {% for imovel in imoveis %}
+                <li>{{ imovel.titulo }} - {{ imovel.preco }}</li>
+            {% endfor %}
+        </ul>
+    </main>
+    <footer>
+        <a href="{% url 'pagina_inicial' %}">Voltar para a Página Inicial</a>
+    </footer>
+</body>
+</html>

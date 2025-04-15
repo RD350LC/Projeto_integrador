@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Categorias</title>
+</head>
+<body>
+    <header>
+        <h1>Lista de Categorias</h1>
+    </header>
+    <main>
+        <ul>
+            {% for categoria in categorias %}
+                <li>{{ categoria.nome }} - {{ categoria.descricao }}</li>
+            {% endfor %}
+        </ul>
+    </main>
+    <footer>
+        <a href="{% url 'pagina_inicial' %}">Voltar para a Página Inicial</a>
+    </footer>
+</body>
+</html>
