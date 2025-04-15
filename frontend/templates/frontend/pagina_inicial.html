@@ -8,31 +8,38 @@
     <link rel="stylesheet" href="{% static 'frontend/css/style.css' %}">
 </head>
 <body>
-    <header>
-        <h1>Bem-vindo à Nossa Imobiliária</h1>
-        <p>Seu lugar para encontrar o imóvel perfeito!</p>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Encontre o Imóvel dos Seus Sonhos</h1>
+            <p>Com a nossa imobiliária, sua busca pelo imóvel perfeito ficou mais fácil.</p>
+            <a href="{% url 'listar_imoveis' %}" class="btn-primary">Ver Imóveis</a>
+        </div>
     </header>
     <main>
         <section class="features">
             <div class="feature">
+                <img src="{% static 'frontend/images/imoveis.jpg' %}" alt="Imóveis">
                 <h2>Imóveis</h2>
                 <p>Descubra uma ampla variedade de imóveis disponíveis para compra e aluguel.</p>
-                <a href="{% url 'listar_imoveis' %}">Ver Imóveis</a>
+                <a href="{% url 'listar_imoveis' %}" class="btn-secondary">Ver Imóveis</a>
             </div>
             <div class="feature">
+                <img src="{% static 'frontend/images/corretores.jpg' %}" alt="Corretores">
                 <h2>Corretores</h2>
                 <p>Conecte-se com nossos corretores experientes para ajudá-lo a encontrar o imóvel ideal.</p>
-                <a href="{% url 'listar_corretores' %}">Ver Corretores</a>
+                <a href="{% url 'listar_corretores' %}" class="btn-secondary">Ver Corretores</a>
             </div>
             <div class="feature">
+                <img src="{% static 'frontend/images/vendas.jpg' %}" alt="Vendas">
                 <h2>Vendas</h2>
                 <p>Acompanhe as vendas realizadas e veja os detalhes das transações.</p>
-                <a href="{% url 'listar_vendas' %}">Ver Vendas</a>
+                <a href="{% url 'listar_vendas' %}" class="btn-secondary">Ver Vendas</a>
             </div>
             <div class="feature">
+                <img src="{% static 'frontend/images/relatorios.jpg' %}" alt="Relatórios">
                 <h2>Relatórios</h2>
                 <p>Obtenha insights detalhados sobre o mercado imobiliário e nossas operações.</p>
-                <a href="{% url 'listar_relatorios' %}">Ver Relatórios</a>
+                <a href="{% url 'listar_relatorios' %}" class="btn-secondary">Ver Relatórios</a>
             </div>
         </section>
     </main>

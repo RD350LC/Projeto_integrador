@@ -7,29 +7,43 @@ body {
     line-height: 1.6;
 }
 
-header {
-    background: linear-gradient(90deg, #4CAF50, #2E7D32);
+header.hero {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('../images/hero.jpg') no-repeat center center/cover;
     color: white;
     text-align: center;
-    padding: 2rem 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 4rem 2rem;
+    position: relative;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 3rem;
-    font-weight: bold;
-}
-
-header p {
-    margin: 0.5rem 0 0;
-    font-size: 1.2rem;
-}
-
-main {
-    padding: 2rem;
-    max-width: 1200px;
+header.hero .hero-content {
+    max-width: 800px;
     margin: 0 auto;
+    animation: fadeIn 2s ease-in-out;
+}
+
+header.hero h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+header.hero p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+header.hero .btn-primary {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+header.hero .btn-primary:hover {
+    background: #2E7D32;
 }
 
 .features {
@@ -37,7 +51,8 @@ main {
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
-    margin-top: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
 }
 
 .feature {
@@ -57,6 +72,12 @@ main {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+.feature img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
 .feature h2 {
     margin-top: 0;
     color: #4CAF50;
@@ -69,7 +90,7 @@ main {
     margin: 1rem 0;
 }
 
-.feature a {
+.feature .btn-secondary {
     display: inline-block;
     margin-top: 1rem;
     padding: 0.5rem 1rem;
@@ -81,7 +102,7 @@ main {
     transition: background 0.3s ease;
 }
 
-.feature a:hover {
+.feature .btn-secondary:hover {
     background: #2E7D32;
 }
 
@@ -96,4 +117,15 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
