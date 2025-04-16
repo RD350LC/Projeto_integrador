@@ -1,12 +1,8 @@
 from django.urls import path
-from django.http import HttpResponse
+from . import views
 
-app_name = 'clientes'  # Ensure this is correctly set
-
-# Placeholder view for testing
-def test_view(request):
-    return HttpResponse("Test view is working!")
+app_name = 'clientes'
 
 urlpatterns = [
-    path('test/', test_view, name='test'),  # Add a test URL pattern
+    path('', views.listar_clientes, name='listar_clientes'),  # Corrected URL pattern
 ]

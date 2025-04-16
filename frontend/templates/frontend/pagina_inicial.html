@@ -6,12 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imobiliária - Página Inicial</title>
     <link rel="stylesheet" href="{% static 'frontend/css/style.css' %}">
+    <script src="{% static 'frontend/js/script.js' %}" defer></script>
 </head>
 <body>
     <header class="hero">
         <div class="hero-content">
-            <h1>Encontre o Imóvel dos Seus Sonhos</h1>
-            <p>Com a nossa imobiliária, sua busca pelo imóvel perfeito ficou mais fácil.</p>
+            <h1 id="dynamic-welcome">Bem-vindo à Página Inicial</h1>
+            <p>Explore as funcionalidades do nosso site:</p>
+            {% if user.is_authenticated %}
+                <p>Olá, {{ user.username }}! <a href="{% url 'logout' %}">Sair</a></p>
+            {% else %}
+                <a href="{% url 'login' %}" class="btn-primary">Login</a>
+            {% endif %}
             <a href="{% url 'listar_imoveis' %}" class="btn-primary">Ver Imóveis</a>
         </div>
     </header>

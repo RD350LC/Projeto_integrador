@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Imóveis</title>
+</head>
+<body>
+    <h1>Lista de Imóveis</h1>
+    <ul>
+        {% for imovel in imoveis %}
+            <li>
+                <h2>{{ imovel.titulo }}</h2>
+                <p>{{ imovel.descricao }}</p>
+                <p>Preço: R$ {{ imovel.preco }}</p>
+                {% if imovel.foto %}
+                    <img src="{{ imovel.foto.url }}" alt="Foto de {{ imovel.titulo }}" style="max-width: 200px;">
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

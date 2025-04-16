@@ -26,4 +26,32 @@ def adicionar_imovel(request):
     
     return render(request, 'imoveis/adicionar_imovel.html', {'form': form})
 
+@login_required
+def editar_imovel(request, pk):
+    if not hasattr(request.user, 'corretor'):
+        raise PermissionDenied("Somente corretores podem editar imóveis.")
+    
+    imovel = Imovel.objects.get(pk=pk)
+    if request.method == 'POST':
+        form = ImovelForm(request.POST, request.FILES, instance=imovel)
+        if form.is_valid():
+            form.save()
+            return redirect('listar_imoveis')
+    else:
+        form = ImovelForm(instance=imovel)
+    
+    return render(request, 'imoveis/editar_imovel.html', {'form': form, 'imovel': imovel})
+
+@login_required
+def excluir_imovel(request, pk):
+    if not hasattr(request.user, 'corretor'):
+        raise PermissionDenied("Somente corretores podem excluir imóveis.")
+    
+    imovel = Imovel.objects.get(pk=pk)
+    if request.method == 'POST':
+        imovel.delete()
+        return redirect('listar_imoveis')
+    
+    return render(request, 'imoveis/excluir_imovel.html', {'imovel': imovel})
+
 # Create your views here.

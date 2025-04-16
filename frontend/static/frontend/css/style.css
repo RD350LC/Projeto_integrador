@@ -21,6 +21,10 @@ header.hero .hero-content {
     animation: fadeIn 2s ease-in-out;
 }
 
+header.hero .hero-content h1 {
+    animation: fadeIn 2s ease-in-out, colorChange 5s infinite alternate;
+}
+
 header.hero h1 {
     font-size: 3rem;
     margin: 0;
@@ -70,6 +74,16 @@ header.hero .btn-primary:hover {
 .feature:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.feature:hover img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.feature:hover h2 {
+    color: #2E7D32;
+    transition: color 0.3s ease;
 }
 
 .feature img {
@@ -127,5 +141,14 @@ footer p {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes colorChange {
+    from {
+        color: #4CAF50;
+    }
+    to {
+        color: #2E7D32;
     }
 }

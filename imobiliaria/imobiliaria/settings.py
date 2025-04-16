@@ -63,7 +63,7 @@ ROOT_URLCONF = 'imobiliaria.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'frontend' / 'templates'],  # Certifique-se de que este caminho está correto
+        'DIRS': [BASE_DIR / 'frontend' / 'templates'],  # Corrected path
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -125,7 +125,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / 'frontend' / 'static']
+STATICFILES_DIRS = [BASE_DIR / 'frontend' / 'static']  # Ensure this directory exists
 
 # Configurações de mídia
 MEDIA_URL = '/media/'
@@ -137,3 +137,6 @@ MEDIA_ROOT = BASE_DIR / 'media'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 SITE_ID = 1
+
+LOGIN_REDIRECT_URL = 'pagina_inicial'
+LOGOUT_REDIRECT_URL = 'pagina_inicial'

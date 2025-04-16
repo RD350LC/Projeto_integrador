@@ -18,14 +18,17 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('frontend.urls')),  # Página inicial
+    path('', include('frontend.urls')),  # Route for the homepage
     path('imoveis/', include('imoveis.urls')),  # Rotas para imóveis
     path('clientes/', include(('clientes.urls', 'clientes'), namespace='clientes')),  # Rotas para clientes
     path('corretores/', include('corretores.urls', namespace='corretores')),  # Rotas para corretores
     path('categoria/', include('categoria.urls', namespace='categoria')),  # Rotas para categorias
     path('vendas/', include('vendas.urls')),  # Rotas para vendas
     path('relatorios/', include('relatorios.urls')),  # Rotas para relatórios
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    path('login/', auth_views.LoginView.as_view(template_name='auth/login.html'), name='login'),
+    path('logout/', auth_views.LogoutView.as_view(next_page='pagina_inicial'), name='logout'),
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
