@@ -17,6 +17,7 @@ body {
     overflow-y: scroll;
     scrollbar-width: thin;
     scrollbar-color: #888 #f1f1f1;
+    line-height: 1.6; /* Melhor legibilidade */
 }
 
 /* Barra de rolagem para navegadores baseados em WebKit */
@@ -137,22 +138,162 @@ body::-webkit-scrollbar-thumb:hover {
     margin: 0 10px;
 }
 
-/* Botão de rolar para o topo */
-.scroll-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+/* Gerenciamento de Imóveis */
+#gerenciamento-imoveis {
+    padding: 3rem 1rem;
+    text-align: center;
+    background-color: var(--background-color);
+    border-top: 2px solid var(--light-gray);
+}
+
+#gerenciamento-imoveis h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#gerenciamento-imoveis button {
+    padding: 1rem 2rem;
     background-color: var(--secondary-color);
     color: #fff;
     border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
     cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#gerenciamento-imoveis button:hover {
+    background-color: #e08e3c;
+    transform: translateY(-2px);
+}
+
+.imoveis-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.imovel-card {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid var(--light-gray);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: left;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Evitar que conteúdo ultrapasse os limites */
+}
+
+.imovel-card img.imovel-imagem {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.imovel-card h3 {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+    text-transform: capitalize;
+}
+
+.imovel-card p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 1.2rem;
+    line-height: 1.5;
+}
+
+.imovel-card button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.imovel-card button:hover {
+    background-color: #00337a;
+}
+
+.imovel-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para o campo de filtro */
+#filtro-imoveis {
+    max-width: 400px;
+    margin: 0 auto 2rem;
+    display: block;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border: 1px solid var(--light-gray);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+#filtro-imoveis:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* Estilo para a lista de imóveis */
+.lista-imoveis {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid var(--light-gray);
+    border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.scroll-to-top:hover {
-    background-color: var(--primary-color);
+.lista-imoveis h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.imovel-item {
+    padding: 1rem;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.imovel-item:last-child {
+    border-bottom: none;
+}
+
+.imovel-item h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.imovel-item p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin: 0;
 }

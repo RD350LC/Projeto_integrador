@@ -1,0 +1,64 @@
+/* Add responsive styles here */
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Certifique-se de que isso não conflite com global.css */
+        line-height: 1.6; /* Melhor legibilidade */
+    }
+    .navbar-menu li {
+        display: block;
+        margin: 10px 0;
+    }
+    .hero-title {
+        font-size: 2rem;
+    }
+    .feature-grid, .highlight-items, .blog-grid {
+        flex-direction: column;
+    }
+
+    #gerenciamento-imoveis {
+        padding: 2rem 1rem;
+    }
+
+    #gerenciamento-imoveis h2 {
+        font-size: 2rem;
+    }
+
+    #gerenciamento-imoveis button {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    .imoveis-lista {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .imovel-card {
+        width: 100%;
+        padding: 1rem;
+        box-shadow: none; /* Remover sombra para dispositivos menores */
+    }
+
+    .imovel-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .imovel-card p {
+        font-size: 0.95rem;
+    }
+
+    #filtro-imoveis {
+        width: 100%;
+        padding: 0.8rem;
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        border: 1px solid var(--light-gray);
+        border-radius: 5px;
+    }
+
+    .imovel-card img.imovel-imagem {
+        height: 150px;
+    }
+}
