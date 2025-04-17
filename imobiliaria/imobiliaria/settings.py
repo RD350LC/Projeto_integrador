@@ -125,7 +125,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / 'frontend' / 'static']  # Ensure this directory exists
+STATICFILES_DIRS = [BASE_DIR / 'frontend' / 'static']  # Ensure this directory contains 'css/style.css'
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # Directory for collectstatic output
 
 # Configurações de mídia
 MEDIA_URL = '/media/'

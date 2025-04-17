@@ -7,6 +7,14 @@
 </head>
 <body>
     <h1>Lista de Corretores</h1>
-    <!-- Add content for listing corretores here -->
+    <ul>
+        {% for corretor in corretores %}
+            <li>
+                <h2>{{ corretor.nome }}</h2>
+                <p>CRECI: {{ corretor.creci }}</p>
+                <p>Telefone: {{ corretor.telefone }}</p>
+            </li>
+        {% endfor %}
+    </ul>
 </body>
 </html>

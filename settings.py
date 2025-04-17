@@ -18,6 +18,8 @@ TEMPLATES = [
     },
 ]
 
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "frontend", "static"),  # Ensure this directory exists
+    BASE_DIR / "frontend/static",
 ]
+STATIC_ROOT = BASE_DIR / "staticfiles"  # Directory for collected static files

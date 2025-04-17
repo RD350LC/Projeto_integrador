@@ -1,0 +1,172 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero {
+    background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background: #007bff;
+    color: #fff;
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: #fff;
+}
+
+.page-header {
+    background: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.page-title {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.imoveis-list {
+    list-style: none;
+    padding: 0;
+}
+
+.imovel-item {
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.imovel-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.imovel-description {
+    margin-bottom: 10px;
+}
+
+.imovel-price {
+    font-weight: bold;
+    color: #28a745;
+}
+
+.imovel-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.navbar {
+    background: #343a40;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.highlight {
+    text-align: center;
+    padding: 50px 0;
+    background: #f8f9fa;
+}
+
+.highlight-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.highlight-items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.highlight-item {
+    text-align: center;
+    max-width: 200px;
+}
+
+.highlight-item .icon {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.footer {
+    background: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0 0;
+    padding: 0;
+}
+
+.footer-links li a {
+    color: #fff;
+    text-decoration: none;
+}

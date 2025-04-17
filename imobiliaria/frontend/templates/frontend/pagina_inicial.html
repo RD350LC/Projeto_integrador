@@ -5,29 +5,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imobiliária - Página Inicial</title>
-    <link rel="stylesheet" href="{% static 'frontend/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'css/global.css' %}">
 </head>
 <body>
+    <!-- Header Section -->
     <header class="hero">
-        <div class="hero-content">
-            <h1>Bem-vindo à Página Inicial</h1>
-            <p>Explore as funcionalidades do nosso site:</p>
-            <a href="{% url 'listar_imoveis' %}" class="btn-primary">Ver Imóveis</a>
+        <nav class="navbar">
+            <div class="container">
+                <a href="{% url 'pagina_inicial' %}" class="navbar-brand">Imobiliária</a>
+                <ul class="navbar-menu">
+                    <li><a href="{% url 'listar_imoveis' %}">Imóveis</a></li>
+                    <li><a href="{% url 'sobre' %}">Sobre Nós</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="hero-content container">
+            <h1 class="hero-title">Bem-vindo à Página Inicial</h1>
+            <p class="hero-subtitle">Explore as funcionalidades do nosso site:</p>
+            <div class="hero-buttons">
+                <a href="{% url 'listar_imoveis' %}" class="btn btn-primary">Ver Imóveis</a>
+                <a href="{% url 'sobre' %}" class="btn btn-secondary">Sobre Nós</a>
+            </div>
         </div>
     </header>
+
+    <!-- Features Section -->
     <main>
-        <section class="features">
-            <!-- Certifique-se de que as imagens e os textos estão sendo carregados corretamente -->
-            <div class="feature">
-                <img src="{% static 'frontend/images/imoveis.jpg' %}" alt="Imóveis">
-                <h2>Imóveis</h2>
-                <p>Descubra uma ampla variedade de imóveis disponíveis para compra e aluguel.</p>
-                <a href="{% url 'listar_imoveis' %}" class="btn-secondary">Ver Imóveis</a>
+        <section class="features container">
+            <h2 class="section-title">Nossos Serviços</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <img src="{% static 'frontend/images/imoveis.jpg' %}" alt="Imóveis" class="feature-image">
+                    <h3 class="feature-title">Imóveis</h3>
+                    <p class="feature-description">Descubra uma ampla variedade de imóveis disponíveis para compra e aluguel.</p>
+                    <a href="{% url 'listar_imoveis' %}" class="btn btn-secondary">Ver Imóveis</a>
+                </div>
+                <div class="feature">
+                    <img src="{% static 'frontend/images/servicos.jpg' %}" alt="Serviços" class="feature-image">
+                    <h3 class="feature-title">Serviços</h3>
+                    <p class="feature-description">Oferecemos serviços personalizados para atender às suas necessidades.</p>
+                    <a href="#servicos" class="btn btn-secondary">Saiba Mais</a>
+                </div>
+                <div class="feature">
+                    <img src="{% static 'frontend/images/corretores.jpg' %}" alt="Corretores" class="feature-image">
+                    <h3 class="feature-title">Corretores</h3>
+                    <p class="feature-description">Encontre os melhores profissionais para ajudá-lo na compra ou venda de imóveis.</p>
+                    <a href="#corretores" class="btn btn-secondary">Saiba Mais</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Highlights Section -->
+        <section class="highlight container">
+            <h2 class="section-title">Por que escolher nossa imobiliária?</h2>
+            <div class="highlight-items">
+                <div class="highlight-item">
+                    <i class="icon fas fa-home"></i>
+                    <h3>Variedade</h3>
+                    <p>Ampla seleção de imóveis.</p>
+                </div>
+                <div class="highlight-item">
+                    <i class="icon fas fa-handshake"></i>
+                    <h3>Confiança</h3>
+                    <p>Atendimento de qualidade.</p>
+                </div>
+                <div class="highlight-item">
+                    <i class="icon fas fa-map-marker-alt"></i>
+                    <h3>Localização</h3>
+                    <p>Imóveis nas melhores regiões.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section class="blog container">
+            <h2 class="section-title">Últimos Artigos</h2>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-card-image">
+                        <img src="{% static 'frontend/images/blog1.jpg' %}" alt="Dicas para Comprar seu Primeiro Imóvel">
+                    </div>
+                    <div class="blog-card-content">
+                        <h3 class="blog-card-title">Dicas para Comprar seu Primeiro Imóvel</h3>
+                        <p class="blog-card-description">Saiba como escolher o imóvel ideal para você com nossas dicas práticas e úteis.</p>
+                        <a href="#artigo1" class="btn btn-primary">Leia Mais</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-card-image">
+                        <img src="{% static 'frontend/images/blog2.jpg' %}" alt="Tendências do Mercado Imobiliário">
+                    </div>
+                    <div class="blog-card-content">
+                        <h3 class="blog-card-title">Tendências do Mercado Imobiliário</h3>
+                        <p class="blog-card-description">Descubra as principais novidades e tendências do setor imobiliário em 2023.</p>
+                        <a href="#artigo2" class="btn btn-primary">Leia Mais</a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2023 Imobiliária. Todos os direitos reservados.</p>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Imobiliária. Todos os direitos reservados.</p>
+            <ul class="footer-links">
+                <li><a href="{% url 'listar_imoveis' %}">Imóveis</a></li>
+                <li><a href="{% url 'sobre' %}">Sobre Nós</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
     </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">&#8679;</button>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
