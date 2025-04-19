@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
     <link rel="stylesheet" href="{% static 'css/global.css' %}">
+    <script src="{% static 'js/imoveis.js' %}"></script>
 </head>
 <body>
     <!-- Header Section -->
@@ -38,19 +39,19 @@
             <h2 class="section-title">Nossos Serviços</h2>
             <div class="feature-grid">
                 <div class="feature">
-                    <img src="{% static 'frontend/images/imoveis.jpg' %}" alt="Imóveis" class="feature-image">
+                    <img src="{% static 'images/imoveis.jpg' %}" alt="Imóveis" class="feature-image">
                     <h3 class="feature-title">Imóveis</h3>
                     <p class="feature-description">Descubra uma ampla variedade de imóveis disponíveis para compra e aluguel.</p>
                     <a href="{% url 'listar_imoveis' %}" class="btn btn-secondary">Ver Imóveis</a>
                 </div>
                 <div class="feature">
-                    <img src="{% static 'frontend/images/servicos.jpg' %}" alt="Serviços" class="feature-image">
+                    <img src="{% static 'images/servicos.jpg' %}" alt="Serviços" class="feature-image">
                     <h3 class="feature-title">Serviços</h3>
                     <p class="feature-description">Oferecemos serviços personalizados para atender às suas necessidades.</p>
                     <a href="#servicos" class="btn btn-secondary">Saiba Mais</a>
                 </div>
                 <div class="feature">
-                    <img src="{% static 'frontend/images/corretores.jpg' %}" alt="Corretores" class="feature-image">
+                    <img src="{% static 'images/corretores.jpg' %}" alt="Corretores" class="feature-image">
                     <h3 class="feature-title">Corretores</h3>
                     <p class="feature-description">Encontre os melhores profissionais para ajudá-lo na compra ou venda de imóveis.</p>
                     <a href="#corretores" class="btn btn-secondary">Saiba Mais</a>
@@ -80,13 +81,22 @@
             </div>
         </section>
 
+        <!-- Call to Action Section -->
+        <section class="cta-section">
+            <div class="container">
+                <h2 class="cta-title">Pronto para encontrar o imóvel dos seus sonhos?</h2>
+                <p class="cta-description">Explore nossa plataforma e descubra as melhores opções para você.</p>
+                <a href="{% url 'listar_imoveis' %}" class="btn btn-animated">Saiba Mais</a>
+            </div>
+        </section>
+
         <!-- Blog Section -->
         <section class="blog container">
             <h2 class="section-title">Últimos Artigos</h2>
             <div class="blog-grid">
                 <div class="blog-card">
                     <div class="blog-card-image">
-                        <img src="{% static 'frontend/images/blog1.jpg' %}" alt="Dicas para Comprar seu Primeiro Imóvel">
+                        <img src="{% static 'images/blog1.jpg' %}" alt="Dicas para Comprar seu Primeiro Imóvel">
                     </div>
                     <div class="blog-card-content">
                         <h3 class="blog-card-title">Dicas para Comprar seu Primeiro Imóvel</h3>
@@ -96,7 +106,7 @@
                 </div>
                 <div class="blog-card">
                     <div class="blog-card-image">
-                        <img src="{% static 'frontend/images/blog2.jpg' %}" alt="Tendências do Mercado Imobiliário">
+                        <img src="{% static 'images/blog2.jpg' %}" alt="Tendências do Mercado Imobiliário">
                     </div>
                     <div class="blog-card-content">
                         <h3 class="blog-card-title">Tendências do Mercado Imobiliário</h3>

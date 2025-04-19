@@ -1,12 +1,34 @@
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bem-vindo à nossa imobiliária! Explore imóveis, serviços e muito mais.">
+    <meta name="keywords" content="imobiliária, imóveis, compra, aluguel, serviços">
+    <meta name="author" content="Imobiliária">
+    <meta property="og:title" content="Imobiliária - Página Inicial">
+    <meta property="og:description" content="Bem-vindo à nossa imobiliária! Explore imóveis, serviços e muito mais.">
+    <meta property="og:image" content="./static/images/og-image.jpg">
+    <meta property="og:type" content="website">
+    <title>Imobiliária - Página Inicial</title>
     <link rel="stylesheet" href="./static/css/global.css">
     <link rel="stylesheet" href="./static/css/responsive.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Adicionado para responsividade -->
+    <style>
+        /* Foco visível para acessibilidade */
+        button:focus, a:focus, input:focus {
+            outline: 2px solid #79aec8;
+            outline-offset: 2px;
+        }
+    </style>
 </head>
 <body>
-    <footer>
-        <p>© 2025 Imobiliária. Todos os direitos reservados.</p>
-    </footer>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#sobre-nos" aria-label="Ir para a seção Sobre Nós">Sobre Nós</a></li>
+                <li><a href="#gerenciamento-imoveis" aria-label="Ir para a seção Gerenciamento de Imóveis">Imóveis</a></li>
+                <li><a href="#contato" aria-label="Ir para a seção Contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <section id="sobre-nos">
         <h2>Sobre Nós</h2>
@@ -15,15 +37,40 @@
 
     <section id="gerenciamento-imoveis">
         <h2>Gerenciamento de Imóveis</h2>
-        <input type="text" id="filtro-imoveis" placeholder="Filtrar imóveis por título..." aria-label="Filtrar imóveis"> <!-- Adicionado aria-label -->
-        <button id="adicionar-imovel">Adicionar Imóvel</button>
+        <input type="text" id="filtro-imoveis" placeholder="Filtrar imóveis por título..." aria-label="Filtrar imóveis">
+        <button id="adicionar-imovel" aria-label="Adicionar novo imóvel">Adicionar Imóvel</button>
         <div id="loading" style="display: none; text-align: center;">
             <p>Carregando imóveis...</p>
         </div>
         <div class="imoveis-lista">
-            <p id="sem-imoveis" style="display: none;">Nenhum imóvel disponível no momento.</p>
+            <p id="sem-imoveis" style="display: none;" aria-live="polite">Nenhum imóvel disponível no momento.</p>
         </div>
     </section>
 
+    <footer> id="contato">
+        <p>© 2025 Imobiliária. Todos os direitos reservados.</p>
+    </footer>tre em contato conosco para mais informações:</p>
+        <form id="form-contato">me="email" required>
+    <script><label for="nome">Nome:</label>
+        // Indicador de carregamento para feedback ao usuário><textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+        const loadingIndicator = document.getElementById('loading');
+        function showLoading() {mail:</label>
+            loadingIndicator.style.display = 'block';l" required>>
+        }   
+        function hideLoading() {">Mensagem:</label>
+            loadingIndicator.style.display = 'none';rows="4" required></textarea>'loading');
+        }           function showLoading() {
+    </script>button type="submit">Enviar</button>            loadingIndicator.style.display = 'block';
+</body>ript src="./static/js/imoveis.js"></script> </form>ript src="./static/js/imoveis.js"></script>
+</html>ript src="./static/js/contato.js"></script>ection>        function hideLoading() {
+            loadingIndicator.style.display = 'none';
+        }   
+</html></body>    </script>
     <script src="./static/js/imoveis.js"></script>
+    <script src="./static/js/contato.js"></script>
 </body>
+</html>
+
+
+
+</html></body>    </script>        }            loadingIndicator.style.display = 'none';        function hideLoading() {        }            loadingIndicator.style.display = 'block';        function showLoading() {        const loadingIndicator = document.getElementById('loading');        // Indicador de carregamento para feedback ao usuário    <script>    </footer>        <p>© 2025 Imobiliária. Todos os direitos reservados.</p>    <footer></html>

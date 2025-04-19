@@ -29,6 +29,6 @@ urlpatterns = [
     path('categoria/', include('categoria.urls', namespace='categoria')),  # Rotas para categorias
     path('vendas/', include('vendas.urls')),  # Rotas para vendas
     path('relatorios/', include('relatorios.urls')),  # Rotas para relatórios
-    path('login/', auth_views.LoginView.as_view(template_name='auth/login.html'), name='login'),
+    path('login/', auth_views.LoginView.as_view(template_name='auth/custom_login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(next_page='pagina_inicial'), name='logout'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
