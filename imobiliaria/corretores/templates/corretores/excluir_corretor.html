@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excluir Corretor</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Excluir Corretor</h1>
+    </header>
+    <main>
+        <p>Tem certeza de que deseja excluir o corretor <strong>{{ corretor.nome }}</strong>?</p>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Excluir</button>
+            <a href="{% url 'corretores:listar_corretores' %}" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </main>
+</body>
+</html>

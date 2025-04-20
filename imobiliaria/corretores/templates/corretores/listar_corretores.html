@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listar Corretores</title>
+    <title>Lista de Corretores</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
@@ -12,16 +12,17 @@
         <h1>Lista de Corretores</h1>
     </header>
     <main>
-        <ul class="corretores-list">
+        <div class="corretores-container">
             {% for corretor in corretores %}
-                <li class="corretor-item">
+                <div class="corretor-card">
                     <h2>{{ corretor.nome }}</h2>
                     <p><strong>CRECI:</strong> {{ corretor.creci }}</p>
                     <p><strong>Telefone:</strong> {{ corretor.telefone }}</p>
                     <p><strong>Email:</strong> <a href="mailto:{{ corretor.email }}">{{ corretor.email }}</a></p>
-                </li>
+                    <a href="{% url 'corretores:detalhar_corretor' corretor.pk %}" class="btn btn-primary">Ver Detalhes</a>
+                </div>
             {% endfor %}
-        </ul>
+        </div>
     </main>
 </body>
 </html>

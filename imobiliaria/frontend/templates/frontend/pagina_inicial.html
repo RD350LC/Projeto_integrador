@@ -59,6 +59,16 @@
             </div>
         </section>
 
+        <!-- Popular Filters Section -->
+        <section class="popular-filters">
+            <h2>Filtros Populares</h2>
+            <ul>
+                <li><a href="{% url 'listar_imoveis' %}?preco_max=500000">Imóveis até R$ 500.000</a></li>
+                <li><a href="{% url 'listar_imoveis' %}?cidade=São Paulo">Imóveis em São Paulo</a></li>
+                <li><a href="{% url 'listar_imoveis' %}?preco_min=1000000">Imóveis acima de R$ 1.000.000</a></li>
+            </ul>
+        </section>
+
         <!-- Highlights Section -->
         <section class="highlight container">
             <h2 class="section-title">Por que escolher nossa imobiliária?</h2>

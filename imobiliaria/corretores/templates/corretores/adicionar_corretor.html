@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Corretor</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Adicionar Corretor</h1>
+    </header>
+    <main>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Salvar</button>
+        </form>
+        <a href="{% url 'corretores:listar_corretores' %}" class="btn btn-secondary">Voltar</a>
+    </main>
+</body>
+</html>

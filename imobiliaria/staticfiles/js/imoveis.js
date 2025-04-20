@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const adicionarImovelBtn = document.getElementById("adicionar-imovel");
     const semImoveisMsg = document.getElementById("sem-imoveis");
     const filtroInput = document.getElementById("filtro-imoveis");
+    const loadingIndicator = document.getElementById("loading");
 
     let imoveis = JSON.parse(localStorage.getItem("imoveis")) || [];
     let isCorretor = false;
@@ -120,12 +121,26 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // Função para mostrar indicador de carregamento
+    function showLoading() {
+        loadingIndicator.style.display = "block";
+    }
+
+    // Função para esconder indicador de carregamento
+    function hideLoading() {
+        loadingIndicator.style.display = "none";
+    }
+
     // Evento para adicionar imóvel
     adicionarImovelBtn?.addEventListener("click", adicionarImovel);
 
     // Evento para filtrar imóveis
     filtroInput?.addEventListener("input", filtrarImoveis);
 
-    // Renderizar imóveis iniciais
-    renderizarImoveis();
+    // Renderizar imóveis iniciais com feedback visual
+    showLoading();
+    setTimeout(() => {
+        renderizarImoveis(); // Simula carregamento
+        hideLoading();
+    }, 1000);
 });

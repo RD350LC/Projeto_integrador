@@ -36,6 +36,12 @@
         gap: 1rem;
     }
 
+    .imoveis-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
     .imovel-card {
         width: 100%;
         padding: 1rem;
@@ -48,6 +54,10 @@
 
     .imovel-card p {
         font-size: 0.95rem;
+    }
+
+    .filter-input {
+        width: 90%;
     }
 
     #filtro-imoveis {
