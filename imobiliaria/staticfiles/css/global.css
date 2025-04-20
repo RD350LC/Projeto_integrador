@@ -1,9 +1,9 @@
 /* Paleta de cores harmoniosa */
 :root {
-    --primary-color: #004aad;
-    --secondary-color: #007bff;
-    --background-color: #f4f4f9;
-    --text-color: #333;
+    --primary-color: #556b8d; /* Neutral primary */
+    --secondary-color: #8ca1b8; /* Softer secondary */
+    --background-color: #f4f4f9; /* Light background */
+    --text-color: #333; /* Keep text readable */
     --light-gray: #e0e0e0;
     --card-shadow: rgba(0, 0, 0, 0.1);
 }

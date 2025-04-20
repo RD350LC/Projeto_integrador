@@ -5,6 +5,7 @@ class Cliente(models.Model):
     email = models.EmailField(unique=True)
     telefone = models.CharField(max_length=15)
     data_nascimento = models.DateField()
+    endereco = models.CharField(max_length=255, blank=True, null=True)
 
     class Meta:
         verbose_name = "Cliente"

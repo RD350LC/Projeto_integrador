@@ -19,16 +19,17 @@
                 <ul class="navbar-menu">
                     <li><a href="{% url 'listar_imoveis' %}">Imóveis</a></li>
                     <li><a href="{% url 'sobre' %}">Sobre Nós</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </div>
         </nav>
         <div class="hero-content container">
-            <h1 class="hero-title">Bem-vindo à Página Inicial</h1>
-            <p class="hero-subtitle">Explore as funcionalidades do nosso site:</p>
+            <h1 class="hero-title">Encontre o Imóvel dos Seus Sonhos</h1>
+            <p class="hero-subtitle">Explore as melhores opções de imóveis para compra e aluguel.</p>
             <div class="hero-buttons">
                 <a href="{% url 'listar_imoveis' %}" class="btn btn-primary">Ver Imóveis</a>
-                <a href="{% url 'sobre' %}" class="btn btn-secondary">Sobre Nós</a>
+                <a href="{% url 'sobre' %}" class="btn btn-secondary">Saiba Mais</a>
             </div>
         </div>
     </header>
@@ -54,19 +55,9 @@
                     <img src="{% static 'images/corretores.jpg' %}" alt="Corretores" class="feature-image">
                     <h3 class="feature-title">Corretores</h3>
                     <p class="feature-description">Encontre os melhores profissionais para ajudá-lo na compra ou venda de imóveis.</p>
-                    <a href="#corretores" class="btn btn-secondary">Saiba Mais</a>
+                    <a href="{% url 'corretores:listar_corretores' %}" class="btn btn-secondary">Ver Corretores</a>
                 </div>
             </div>
-        </section>
-
-        <!-- Popular Filters Section -->
-        <section class="popular-filters">
-            <h2>Filtros Populares</h2>
-            <ul>
-                <li><a href="{% url 'listar_imoveis' %}?preco_max=500000">Imóveis até R$ 500.000</a></li>
-                <li><a href="{% url 'listar_imoveis' %}?cidade=São Paulo">Imóveis em São Paulo</a></li>
-                <li><a href="{% url 'listar_imoveis' %}?preco_min=1000000">Imóveis acima de R$ 1.000.000</a></li>
-            </ul>
         </section>
 
         <!-- Highlights Section -->
@@ -99,33 +90,6 @@
                 <a href="{% url 'listar_imoveis' %}" class="btn btn-animated">Saiba Mais</a>
             </div>
         </section>
-
-        <!-- Blog Section -->
-        <section class="blog container">
-            <h2 class="section-title">Últimos Artigos</h2>
-            <div class="blog-grid">
-                <div class="blog-card">
-                    <div class="blog-card-image">
-                        <img src="{% static 'images/blog1.jpg' %}" alt="Dicas para Comprar seu Primeiro Imóvel">
-                    </div>
-                    <div class="blog-card-content">
-                        <h3 class="blog-card-title">Dicas para Comprar seu Primeiro Imóvel</h3>
-                        <p class="blog-card-description">Saiba como escolher o imóvel ideal para você com nossas dicas práticas e úteis.</p>
-                        <a href="#artigo1" class="btn btn-primary">Leia Mais</a>
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <div class="blog-card-image">
-                        <img src="{% static 'images/blog2.jpg' %}" alt="Tendências do Mercado Imobiliário">
-                    </div>
-                    <div class="blog-card-content">
-                        <h3 class="blog-card-title">Tendências do Mercado Imobiliário</h3>
-                        <p class="blog-card-description">Descubra as principais novidades e tendências do setor imobiliário em 2023.</p>
-                        <a href="#artigo2" class="btn btn-primary">Leia Mais</a>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
     <!-- Footer Section -->
@@ -141,10 +105,20 @@
     </footer>
 
     <!-- Scroll to Top Button -->
-    <button id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">&#8679;</button>
+    <button id="scrollToTop" class="scroll-to-top" style="display: none;" onclick="scrollToTop()">&#8679;</button>
     <script>
+        const scrollToTopButton = document.getElementById("scrollToTop");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                scrollToTopButton.style.display = "flex";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        });
+
         function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo({ top: 0, behavior: "smooth" });
         }
     </script>
 </body>

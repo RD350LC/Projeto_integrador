@@ -47,30 +47,37 @@
         </div>
     </section>
 
-    <footer> id="contato">
+    <footer id="contato">
         <p>© 2025 Imobiliária. Todos os direitos reservados.</p>
-    </footer>tre em contato conosco para mais informações:</p>
-        <form id="form-contato">me="email" required>
-    <script><label for="nome">Nome:</label>
-        // Indicador de carregamento para feedback ao usuário><textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-        const loadingIndicator = document.getElementById('loading');
-        function showLoading() {mail:</label>
-            loadingIndicator.style.display = 'block';l" required>>
-        }   
-        function hideLoading() {">Mensagem:</label>
-            loadingIndicator.style.display = 'none';rows="4" required></textarea>'loading');
-        }           function showLoading() {
-    </script>button type="submit">Enviar</button>            loadingIndicator.style.display = 'block';
-</body>ript src="./static/js/imoveis.js"></script> </form>ript src="./static/js/imoveis.js"></script>
-</html>ript src="./static/js/contato.js"></script>ection>        function hideLoading() {
-            loadingIndicator.style.display = 'none';
-        }   
-</html></body>    </script>
+        <p>Entre em contato conosco para mais informações:</p>
+        <form id="form-contato">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </footer>
+
+    <button id="scrollToTop" class="scroll-to-top" style="display: none;" onclick="scrollToTop()">&#8679;</button>
+    <script>
+        const scrollToTopButton = document.getElementById("scrollToTop");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                scrollToTopButton.style.display = "flex";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    </script>
     <script src="./static/js/imoveis.js"></script>
     <script src="./static/js/contato.js"></script>
 </body>
 </html>
-
-
-
-</html></body>    </script>        }            loadingIndicator.style.display = 'none';        function hideLoading() {        }            loadingIndicator.style.display = 'block';        function showLoading() {        const loadingIndicator = document.getElementById('loading');        // Indicador de carregamento para feedback ao usuário    <script>    </footer>        <p>© 2025 Imobiliária. Todos os direitos reservados.</p>    <footer></html>

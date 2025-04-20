@@ -9,3 +9,4 @@ class Venda(models.Model):
     imovel = models.ForeignKey(Imovel, on_delete=models.CASCADE)
     data_venda = models.DateField()
     valor_venda = models.DecimalField(max_digits=10, decimal_places=2)
+    valor = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)

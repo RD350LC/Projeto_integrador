@@ -2,11 +2,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #f0f4f8; /* Modern light background */
 }
 
 header {
-    background-color: #007bff;
+    background-color: #1e88e5; /* Vibrant blue */
     color: white;
     padding: 1rem;
     text-align: center;
@@ -93,7 +93,7 @@ h1 {
 }
 
 .hero {
-    background: linear-gradient(to right, #004aad, #007bff);
+    background: linear-gradient(to right, #1e88e5, #42a5f5); /* Vibrant gradient */
     color: #fff;
     text-align: center;
     padding: 80px 20px;
@@ -122,12 +122,12 @@ h1 {
 }
 
 .btn-primary {
-    background: #007bff;
+    background: #1e88e5; /* Vibrant blue */
     color: #fff;
 }
 
 .btn-primary:hover {
-    background: #0056b3;
+    background: #1565c0; /* Darker blue */
 }
 
 .page-header {
@@ -234,7 +234,7 @@ h1 {
 }
 
 .footer {
-    background: #343a40;
+    background: #263238; /* Modern dark tone */
     color: #fff;
     text-align: center;
     padding: 10px 0;
@@ -494,4 +494,64 @@ h1 {
     .imovel-card {
         width: 100%;
     }
+}
+
+/* Estilo para as opções de contato */
+.contact-options {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.contact-options h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.contact-options ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-options ul li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.contact-options ul li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-options ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para o botão de rolar para o topo */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #1e88e5; /* Vibrant blue */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none; /* Inicialmente escondido */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    background-color: #1565c0; /* Darker blue */
+    transform: scale(1.1);
 }
