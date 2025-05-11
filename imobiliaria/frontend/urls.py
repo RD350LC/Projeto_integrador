@@ -3,5 +3,6 @@ from . import views
 
 urlpatterns = [
     path('', views.pagina_inicial, name='pagina_inicial'),  # Certifique-se de que a URL está correta
-    path('sobre/', views.sobre, name='sobre'),  # Nova rota para a página "Sobre"
+    path('sobre/', views.contato, name='sobre'),  # Redirect 'sobre' to 'contato'
+    path('contato/', views.contato, name='contato'),
 ]

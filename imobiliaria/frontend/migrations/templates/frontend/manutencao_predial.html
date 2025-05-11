@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manutenção Predial</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'css/global.css' %}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="hero">
+        <nav class="navbar">
+            <div class="container">
+                <a href="{% url 'pagina_inicial' %}" class="navbar-brand">Imobiliária</a>
+                <ul class="navbar-menu">
+                    <li><a href="{% url 'listar_imoveis' %}">Imóveis</a></li>
+                    <li><a href="{% url 'sobre' %}">Sobre Nós</a></li>
+                    <li><a href="{% url 'manutencao_predial' %}">Serviços</a></li>
+                    <li><a href="{% url 'pagina_inicial' %}#contato">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="hero-content container">
+            <h1 class="hero-title">Manutenção Predial</h1>
+            <p class="hero-subtitle">Serviços especializados para manutenção e conservação de prédios.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="container">
+            <h2 class="section-title">Nossos Serviços de Manutenção Predial</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <img src="{% static 'images/eletrica.jpg' %}" alt="Serviços Elétricos" class="feature-image">
+                    <h3 class="feature-title">Serviços Elétricos</h3>
+                    <p class="feature-description">Manutenção e reparos em instalações elétricas para garantir segurança e eficiência.</p>
+                </div>
+                <div class="feature">
+                    <img src="{% static 'images/hidraulica.jpg' %}" alt="Serviços Hidráulicos" class="feature-image">
+                    <h3 class="feature-title">Serviços Hidráulicos</h3>
+                    <p class="feature-description">Reparos e manutenção em sistemas hidráulicos para evitar vazamentos e desperdícios.</p>
+                </div>
+                <div class="feature">
+                    <img src="{% static 'images/limpeza.jpg' %}" alt="Limpeza e Conservação" class="feature-image">
+                    <h3 class="feature-title">Limpeza e Conservação</h3>
+                    <p class="feature-description">Serviços de limpeza e conservação para manter o ambiente sempre agradável.</p>
+                </div>
+                <div class="feature">
+                    <img src="{% static 'images/pintura.jpg' %}" alt="Pintura Predial" class="feature-image">
+                    <h3 class="feature-title">Pintura Predial</h3>
+                    <p class="feature-description">Pintura de fachadas e áreas internas para renovar e valorizar o imóvel.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conservation and Maintenance Section -->
+        <section class="container">
+            <h2 class="section-title">Conservação e Manutenção</h2>
+            <p class="section-description">Oferecemos serviços especializados para garantir a segurança, funcionalidade e estética do seu prédio.</p>
+            <div class="service-grid">
+                <div class="service">
+                    <img src="{% static 'images/seguranca.jpg' %}" alt="Segurança" class="service-image">
+                    <h3 class="service-title">Segurança</h3>
+                    <p class="service-description">Instalação e manutenção de sistemas de segurança, como câmeras e alarmes.</p>
+                </div>
+                <div class="service">
+                    <img src="{% static 'images/jardinagem.jpg' %}" alt="Jardinagem" class="service-image">
+                    <h3 class="service-title">Jardinagem</h3>
+                    <p class="service-description">Cuidados com áreas verdes, incluindo poda, plantio e manutenção de jardins.</p>
+                </div>
+                <div class="service">
+                    <img src="{% static 'images/estrutural.jpg' %}" alt="Manutenção Estrutural" class="service-image">
+                    <h3 class="service-title">Manutenção Estrutural</h3>
+                    <p class="service-description">Reparos em estruturas para garantir a integridade e segurança do prédio.</p>
+                </div>
+                <div class="service">
+                    <img src="{% static 'images/limpeza_fachada.jpg' %}" alt="Limpeza de Fachadas" class="service-image">
+                    <h3 class="service-title">Limpeza de Fachadas</h3>
+                    <p class="service-description">Serviços de limpeza para manter a aparência e valorização do imóvel.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <div class="container">
+                <h2 class="cta-title">Precisa de Manutenção Predial?</h2>
+                <p class="cta-description">Entre em contato conosco e solicite um orçamento personalizado.</p>
+                <a href="#contato" class="btn btn-animated">Fale Conosco</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Imobiliária. Todos os direitos reservados.</p>
+            <ul class="footer-links">
+                <li><a href="{% url 'listar_imoveis' %}">Imóveis</a></li>
+                <li><a href="{% url 'sobre' %}">Sobre Nós</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

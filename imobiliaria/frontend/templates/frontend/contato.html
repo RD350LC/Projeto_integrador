@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,34 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        .contact-info {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 20px auto;
+            line-height: 1.8;
+        }
+        .contact-info p {
+            font-size: 1.2rem;
+            color: #333;
+        }
+        .contact-info p strong {
+            color: #1e88e5;
+        }
+        .contact-info a {
+            color: #1e88e5;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .page-title {
+            font-size: 2.5rem;
+            color: #1e88e5;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
     <header class="page-header">
-        <h1 class="page-title">Contato</h1>
+        <h1 class="page-title">Informações de Contato</h1>
     </header>
     <main class="container">
-        <form id="form-contato">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-        <section class="contact-options">
-            <h2>Outros Canais de Comunicação</h2>
-            <p>Entre em contato conosco também por:</p>
-            <ul>
-                <li><strong>Email:</strong> <a href="mailto:contato@imobiliaria.com">contato@imobiliaria.com</a></li>
-                <li><strong>WhatsApp:</strong> <a href="https://wa.me/5511999999999" target="_blank">+55 11 99999-9999</a></li>
-                <li><strong>Redes Sociais:</strong></li>
-                <ul>
-                    <li><a href="https://facebook.com/imobiliaria" target="_blank">Facebook</a></li>
-                    <li><a href="https://instagram.com/imobiliaria" target="_blank">Instagram</a></li>
-                    <li><a href="https://twitter.com/imobiliaria" target="_blank">Twitter</a></li>
-                </ul>
-            </ul>
+        <section class="contact-info">
+            <p><strong>Razão social:</strong> IZILDINHA DOMINGUES IMÓVEIS - CRECI: 43646-J</p>
+            <p><strong>Empresa fundada em:</strong> 2000</p>
+            <p><strong>Endereço:</strong> Rua: Santo Antônio, n°204, Centro, Iperó/SP. CEP 18560-000</p>
+            <p><strong>Fones:</strong> (15) 326610-30 - (15) 9.9705-0633 - (15) 9.9797-9947</p>
+            <p><strong>E-mail:</strong> <a href="mailto:izildinhadomingues@hotmail.com">izildinhadomingues@hotmail.com</a></p>
+            <p><strong>Instagram:</strong> <a href="https://www.instagram.com/izildinhadominguesimoveis" target="_blank">izildinhadominguesimoveis</a></p>
+            <p><strong>Facebook:</strong> <a href="https://www.facebook.com/idimoveis/" target="_blank">https://www.facebook.com/idimoveis/</a></p>
+            <p><strong>Site:</strong> <a href="http://www.idimoveis.com.br" target="_blank">http://www.idimoveis.com.br</a></p>
+            <p><strong>Missão:</strong> “A Izildinha Domingues imóveis surgiu há mais de 25 anos e tem como missão proporcionar de maneira única e individual aos seus clientes o melhor negócio imobiliário, atentando para a visão tanto de quem vende quanto de quem compra para que ambos tenham a certeza de ter feito um bom negócio. Equilíbrio e ética são nossos fundamentos.”</p>
         </section>
     </main>
 </body>

@@ -6,4 +6,7 @@ def pagina_inicial(request):
 def sobre(request):
     return render(request, 'frontend/sobre.html')  # Certifique-se de que o caminho do template está correto
 
+def contato(request):
+    return render(request, 'frontend/contato.html')
+
 # Create your views here.

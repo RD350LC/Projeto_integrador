@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ imovel.titulo }}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header class="page-header">
+        <h1 class="page-title">{{ imovel.titulo }}</h1>
+    </header>
+    <main class="container">
+        <div class="imovel-detail">
+            {% if imovel.foto %}
+                <img src="{{ imovel.foto.url }}" alt="Foto de {{ imovel.titulo }}" class="imovel-image">
+            {% endif %}
+            <p class="imovel-description">{{ imovel.descricao }}</p>
+            <p class="imovel-price">Preço: R$ {{ imovel.preco }}</p>
+        </div>
+        <a href="{% url 'listar_imoveis' %}" class="btn btn-secondary">Voltar à Lista</a>
+    </main>
+</body>
+</html>

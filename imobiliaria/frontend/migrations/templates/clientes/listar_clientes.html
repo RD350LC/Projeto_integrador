@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Clientes</title>
+</head>
+<body>
+    <h1>Lista de Clientes</h1>
+    <ul>
+        {% for cliente in clientes %}
+            <li>
+                <h2>{{ cliente.nome }}</h2>
+                <p>Email: {{ cliente.email }}</p>
+                <p>Telefone: {{ cliente.telefone }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

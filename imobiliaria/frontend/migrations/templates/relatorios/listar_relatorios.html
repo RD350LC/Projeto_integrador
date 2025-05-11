@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Relatórios</title>
+</head>
+<body>
+    <h1>Lista de Relatórios</h1>
+    <ul>
+        {% for relatorio in relatorios %}
+            <li>
+                <h2>{{ relatorio.titulo }}</h2>
+                <p>{{ relatorio.descricao }}</p>
+                <p>Data: {{ relatorio.data }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manutenção Predial</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Manutenção Predial</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Serviços Oferecidos</h2>
+            <p>Detalhes sobre os serviços de manutenção predial.</p>
+        </section>
+    </main>
+    <footer>
+        <a href="{% url 'pagina_inicial' %}">Voltar para a Página Inicial</a>
+    </footer>
+</body>
+</html>

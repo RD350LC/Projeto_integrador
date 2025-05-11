@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Imóveis</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header class="page-header">
+        <h1 class="page-title">Imóveis Disponíveis</h1>
+    </header>
+    <main class="container">
+        <div class="filter-section">
+            <form method="get" class="filter-form">
+                <input type="number" name="preco_min" placeholder="Preço mínimo" value="{{ request.GET.preco_min }}">
+                <input type="number" name="preco_max" placeholder="Preço máximo" value="{{ request.GET.preco_max }}">
+                <input type="text" name="cidade" placeholder="Cidade" value="{{ request.GET.cidade }}">
+                <input type="text" name="tipo" placeholder="Tipo (ex: Casa, Apartamento)" value="{{ request.GET.tipo }}">
+                <button type="submit" class="btn btn-primary">Filtrar</button>
+            </form>
+        </div>
+        <ul class="imoveis-list">
+            {% for imovel in imoveis %}
+                <li class="imovel-item">
+                    <div class="imovel-card">
+                        {% if imovel.foto %}
+                            <img src="{{ imovel.foto.url }}" alt="Foto de {{ imovel.titulo }}" class="imovel-image">
+                        {% endif %}
+                        <h2 class="imovel-title">{{ imovel.titulo }}</h2>
+                        <p class="imovel-description">{{ imovel.descricao }}</p>
+                        <p class="imovel-price">Preço: R$ {{ imovel.preco }}</p>
+                        <p class="imovel-type">Tipo: {{ imovel.tipo }}</p>
+                        <a href="{% url 'detalhar_imovel' imovel.id %}" class="btn btn-primary">Ver Detalhes</a>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+        <div class="pagination">
+            {% if imoveis.has_previous %}
+                <a href="?page={{ imoveis.previous_page_number }}" class="btn btn-secondary">Anterior</a>
+            {% endif %}
+            <span>Página {{ imoveis.number }} de {{ imoveis.paginator.num_pages }}</span>
+            {% if imoveis.has_next %}
+                <a href="?page={{ imoveis.next_page_number }}" class="btn btn-secondary">Próxima</a>
+            {% endif %}
+        </div>
+    </main>
+</body>
+</html>
