@@ -6,20 +6,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manutenção Predial</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
 </head>
 <body>
     <!-- Header Section -->
-    <header>
-        <h1>Manutenção Predial</h1>
+    <header class="page-header">
+        <div class="container">
+            <h1>Manutenção Predial</h1>
+            <p>Garantimos a segurança, funcionalidade e estética do seu imóvel com serviços especializados.</p>
+        </div>
     </header>
-    <main>
-        <section>
-            <h2>Serviços Oferecidos</h2>
-            <p>Detalhes sobre os serviços de manutenção predial.</p>
-        </section>
-    </main>
-    <footer>
-        <a href="{% url 'pagina_inicial' %}">Voltar para a Página Inicial</a>
+
+    <!-- Introduction Section -->
+    <section class="introduction container">
+        <h2 class="section-title">Sobre a Manutenção Predial</h2>
+        <p>Oferecemos uma ampla gama de serviços para atender às necessidades de manutenção e conservação de prédios residenciais e comerciais. Nossa equipe é composta por profissionais qualificados, prontos para garantir a melhor experiência para nossos clientes.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services container">
+        <h2 class="section-title">Nossos Serviços</h2>
+        <div class="service-grid">
+            <div class="service-item">
+                <img src="{% static 'images/eletrica.jpg' %}" alt="Serviços Elétricos" class="feature-image">
+                <h3>Serviços Elétricos</h3>
+                <p>Manutenção e reparos em instalações elétricas.</p>
+            </div>
+            <div class="service-item">
+                <img src="{% static 'images/hidraulica.jpg' %}" alt="Serviços Hidráulicos">
+                <h3>Serviços Hidráulicos</h3>
+                <p>Reparos e manutenção em sistemas hidráulicos.</p>
+            </div>
+            <div class="service-item">
+                <img src="{% static 'images/limpeza.jpg' %}" alt="Limpeza Predial" class="feature-image">
+                <h3>Limpeza Predial</h3>
+                <p>Serviços de limpeza e conservação de áreas comuns.</p>
+            </div>
+            <div class="service-item">
+                <img src="{% static 'images/pintura.jpg' %}" alt="Pintura Predial" class="feature-image">
+                <h3>Pintura Predial</h3>
+                <p>Renovação de fachadas e áreas internas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Differentials Section -->
+    <section class="differentials container">
+        <h2 class="section-title">Nossos Diferenciais</h2>
+        <div class="differential-grid">
+            <div class="differential-item">
+                <i class="icon fas fa-tools"></i>
+                <h3>Equipe Qualificada</h3>
+                <p>Profissionais experientes e certificados para atender às suas necessidades.</p>
+            </div>
+            <div class="differential-item">
+                <i class="icon fas fa-clock"></i>
+                <h3>Atendimento Rápido</h3>
+                <p>Resolvemos problemas com agilidade e eficiência.</p>
+            </div>
+            <div class="differential-item">
+                <i class="icon fas fa-thumbs-up"></i>
+                <h3>Garantia de Qualidade</h3>
+                <p>Serviços realizados com alto padrão de qualidade.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials container">
+        <h2 class="section-title">O que nossos clientes dizem</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-item">
+                <p>"A equipe foi extremamente profissional e eficiente. Recomendo os serviços de manutenção predial!"</p>
+                <h4>- João Silva</h4>
+            </div>
+            <div class="testimonial-item">
+                <p>"Os serviços de limpeza e conservação superaram minhas expectativas. Excelente trabalho!"</p>
+                <h4>- Maria Oliveira</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq container">
+        <h2 class="section-title">Perguntas Frequentes</h2>
+        <div class="faq-item">
+            <h3>Quais tipos de serviços vocês oferecem?</h3>
+            <p>Oferecemos serviços elétricos, hidráulicos, limpeza predial, pintura e muito mais.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Como posso solicitar um orçamento?</h3>
+            <p>Você pode entrar em contato conosco através do formulário na seção de contato ou pelo telefone disponível no rodapé.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-form container">
+        <h2 class="section-title">Entre em Contato</h2>
+        <form action="{% url 'contato' %}" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Imobiliária. Todos os direitos reservados.</p>
+            <a href="{% url 'pagina_inicial' %}" class="btn btn-secondary">Voltar para a Página Inicial</a>
+        </div>
     </footer>
 </body>
 </html>

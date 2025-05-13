@@ -9,4 +9,7 @@ def sobre(request):
 def contato(request):
     return render(request, 'frontend/contato.html')
 
+def manutencao_predial(request):
+    return render(request, 'frontend/manutencao_predial.html')
+
 # Create your views here.

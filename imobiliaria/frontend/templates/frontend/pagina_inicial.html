@@ -19,7 +19,7 @@
                 <ul class="navbar-menu">
                     <li><a href="{% url 'listar_imoveis' %}">Imóveis</a></li>
                     <li><a href="{% url 'sobre' %}">Sobre Nós</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="{% url 'manutencao_predial' %}">Serviços</a></li>
                     <li><a href="{% url 'contato' %}">Contato</a></li>
                 </ul>
             </div>
@@ -49,7 +49,7 @@
                     <img src="{% static 'images/servicos.jpg' %}" alt="Serviços" class="feature-image">
                     <h3 class="feature-title">Serviços</h3>
                     <p class="feature-description">Oferecemos serviços personalizados para atender às suas necessidades.</p>
-                    <a href="#servicos" class="btn btn-secondary">Saiba Mais</a>
+                    <a href="{% url 'manutencao_predial' %}" class="btn btn-secondary">Saiba Mais</a>
                 </div>
                 <div class="feature">
                     <img src="{% static 'images/corretores.jpg' %}" alt="Corretores" class="feature-image">

@@ -89,4 +89,9 @@
         font-size: 1rem;
         padding: 0.6rem 1rem;
     }
+
+    .differential-grid {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
 }
