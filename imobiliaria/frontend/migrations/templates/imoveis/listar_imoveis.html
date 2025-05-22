@@ -22,24 +22,28 @@
             </form>
         </div>
         <ul class="imoveis-list">
-            {% for imovel in imoveis %}
-                <li class="imovel-item">
-                    <div class="imovel-card">
-                        {% if imovel.foto %}
-                            <img src="{{ imovel.foto.url }}" alt="Foto de {{ imovel.titulo }}" class="imovel-image">
-                        {% endif %}
-                        <h2 class="imovel-title">{{ imovel.titulo }}</h2>
-                        <p class="imovel-description">{{ imovel.descricao }}</p>
-                        <p class="imovel-price">Preço: R$ {{ imovel.preco }}</p>
-                        <p class="imovel-type">Tipo: {{ imovel.tipo }}</p>
-                        <a href="{% url 'detalhar_imovel' imovel.id %}" class="btn btn-primary">Ver Detalhes</a>
-                    </div>
-                </li>
-            {% endfor %}
+            {% if imoveis %}
+                {% for imovel in imoveis %}
+                    <li class="imovel-item">
+                        <div class="imovel-card">
+                            {% if imovel.foto %}
+                                <img src="{{ imovel.foto.url }}" alt="Foto de {{ imovel.titulo }}" class="imovel-image">
+                            {% endif %}
+                            <h2 class="imovel-title">{{ imovel.titulo }}</h2>
+                            <p class="imovel-description">{{ imovel.descricao }}</p>
+                            <p class="imovel-price">Preço: R$ {{ imovel.preco }}</p>
+                            <p class="imovel-type">Tipo: {{ imovel.tipo }}</p>
+                            <a href="{% url 'detalhar_imovel' imovel.id %}" class="btn btn-primary">Ver Detalhes</a>
+                        </div>
+                    </li>
+                {% endfor %}
+            {% else %}
+                <p class="no-results">Nenhum imóvel encontrado com os filtros aplicados.</p>
+            {% endif %}
         </ul>
         <div class="pagination">
             {% if imoveis.has_previous %}
-                <a href="?page={{ imoveis.previous_page_number }}" class="btn btn-secondary">Anterior</a>
+                <a href="?page={{ imovecis.previous_page_number }}" class="btn btn-secondary">Anterior</a>
             {% endif %}
             <span>Página {{ imoveis.number }} de {{ imoveis.paginator.num_pages }}</span>
             {% if imoveis.has_next %}

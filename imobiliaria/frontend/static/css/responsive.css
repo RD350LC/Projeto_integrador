@@ -48,12 +48,20 @@
         box-shadow: none; /* Remover sombra para dispositivos menores */
     }
 
+    .imovel-card h2 {
+        font-size: 1.4rem;
+    }
+
     .imovel-card h3 {
         font-size: 1.4rem;
     }
 
     .imovel-card p {
         font-size: 0.95rem;
+    }
+
+    .no-results {
+        font-size: 1rem;
     }
 
     .filter-input {
@@ -93,5 +101,18 @@
     .differential-grid {
         flex-direction: column;
         gap: 1.5rem;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-us {
+        padding: 2rem 1rem;
+    }
+
+    .contact-us .btn {
+        width: 100%;
+        font-size: 1rem;
     }
 }
